@@ -16,4 +16,8 @@
     <ProjectReference Include="..\MedicalEncounters.Domain\MedicalEncounters.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Exceptions\Patients\" />
+  </ItemGroup>
+
 </Project>

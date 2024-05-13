@@ -1,5 +1,6 @@
 using MedicalEncounters.Infrastructure.Extensions;
 using MedicalEncounters.Application.Extensions;
+using MedicalEncounters.Api.Middlewares;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -19,6 +20,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 
