@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalEncounters.Api", "MedicalEncounters.Api\MedicalEncounters.Api.csproj", "{93F50292-8597-40E8-912B-666F754A803D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{04C2F645-7091-49B4-A930-4A0F6FF23CA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93F50292-8597-40E8-912B-666F754A803D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F50292-8597-40E8-912B-666F754A803D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F50292-8597-40E8-912B-666F754A803D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F50292-8597-40E8-912B-666F754A803D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04C2F645-7091-49B4-A930-4A0F6FF23CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C2F645-7091-49B4-A930-4A0F6FF23CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C2F645-7091-49B4-A930-4A0F6FF23CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04C2F645-7091-49B4-A930-4A0F6FF23CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2716D66F-8944-431A-8FC5-15C31A345615}
+	EndGlobalSection
+EndGlobal

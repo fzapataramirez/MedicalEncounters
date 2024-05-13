@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  medicalencounters.api:
+    image: ${DOCKER_REGISTRY-}medicalencountersapi
+    container_name: medicalencounters.api
+    build:
+      context: .
+      dockerfile: MedicalEncounters.Api/Dockerfile
+    ports:
+        - "5000:5000"
+        - "5001:5001"
+
+  medicalencounters.database:
+    image: postgres:latest
+    container_name: medicalencounters.database
+    environment: 
+        - POSTGRES_DB=medicalencounters
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+    volumes:
+        - ./.containers/medicalencounters-db:/var/lib/postgresql/data
+    ports:
+        - 5432:5432
+  
+  
+         
