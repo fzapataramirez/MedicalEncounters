@@ -1,4 +1,5 @@
-﻿using MedicalEncounters.Application.Interfaces;
+﻿using MediatR;
+using MedicalEncounters.Application.Queries.Patients;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MedicalEncounters.Api.Controllers
@@ -8,17 +9,19 @@ namespace MedicalEncounters.Api.Controllers
 
     public class PatientsController : Controller
     {
-        private readonly IPatientRepository _medicalEncounterRepository;
-        
-        public PatientsController(IPatientRepository medicalEncounterRepository)
+        private readonly IMediator _mediator;
+
+        public PatientsController(IMediator mediator)
         {
-            _medicalEncounterRepository = medicalEncounterRepository;
+            _mediator = mediator;
         }
 
         [HttpGet("encounters")]
         public async Task<IActionResult> EncounterDetails()
         {
-            return Ok(await _medicalEncounterRepository.GetPatientsWithEncounters(2));
+            var result = await _mediator.Send(new GetPatientsWithEncounterDetailsQuery());
+
+            return Ok(result);
         }
     }
 }

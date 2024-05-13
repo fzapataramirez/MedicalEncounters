@@ -25,7 +25,7 @@ INSERT INTO patients (first_name, last_name, age) VALUES
     ('Diego', 'Zapata', 64),
     ('Matias', 'Zapata', 3),
     ('Karol', 'Ortega', 39),
-    ('Jacobo', 'Zapata', 39);
+    ('Jacobo', 'Zapata', 1);
 
 -- Create payers table
 CREATE TABLE payers (

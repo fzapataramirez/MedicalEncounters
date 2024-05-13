@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MedicalEncounters.Domain\MedicalEncounters.Domain.csproj" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Queries\Encounters\" />
+    <ProjectReference Include="..\MedicalEncounters.Domain\MedicalEncounters.Domain.csproj" />
   </ItemGroup>
 
 </Project>
