@@ -8,7 +8,7 @@ namespace MedicalEncounters.Infrastructure.Extensions
     {
         public static void AddInfrastructureLayer(this IServiceCollection services)
         {
-            services.AddScoped<IMedicalEncounterRepository, MedicalEncounterRepository>();
+            services.AddScoped<IPatientRepository, PatientRepository>();
         }
     }
 }

@@ -10,4 +10,8 @@
     <ProjectReference Include="..\MedicalEncounters.Domain\MedicalEncounters.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Queries\Encounters\" />
+  </ItemGroup>
+
 </Project>
