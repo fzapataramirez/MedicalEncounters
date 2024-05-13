@@ -1,7 +1,9 @@
 ﻿using MediatR;
+using MedicalEncounters.Application.Configuration;
 using MedicalEncounters.Application.DTOs.Patients;
 using MedicalEncounters.Application.Enums;
 using MedicalEncounters.Application.Interfaces;
+using Microsoft.Extensions.Options;
 
 namespace MedicalEncounters.Application.Queries.Patients
 {
@@ -12,16 +14,19 @@ namespace MedicalEncounters.Application.Queries.Patients
     public class GetPatientsWithEncounterDetailsQueryHandler : IRequestHandler<GetPatientsWithEncounterDetailsQuery, IEnumerable<PatientEncountersDetailDto>>
     {
         private readonly IPatientRepository _patientRepository;
-        private const int MIN_CITIES_REQUIRED = 2;
+        private readonly PatientQueryOptions _patientOptions;
 
-        public GetPatientsWithEncounterDetailsQueryHandler(IPatientRepository patientRepository)
+        public GetPatientsWithEncounterDetailsQueryHandler(
+            IPatientRepository patientRepository,
+            IOptions<PatientQueryOptions> patientOptions)
         {
             _patientRepository = patientRepository;
+            _patientOptions = patientOptions.Value;
         }
 
         public async Task<IEnumerable<PatientEncountersDetailDto>> Handle(GetPatientsWithEncounterDetailsQuery request, CancellationToken cancellationToken)
         {
-            var data = await _patientRepository.GetPatientsWithEncounters(MIN_CITIES_REQUIRED);
+            var data = await _patientRepository.GetPatientsWithEncounters(_patientOptions.MinCitiesRequired);
 
             return data.Select(patientData =>
             {
