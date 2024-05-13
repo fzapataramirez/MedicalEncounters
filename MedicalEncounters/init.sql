@@ -53,9 +53,12 @@ CREATE TABLE encounters (
 INSERT INTO encounters (patient_id, facility_id, payer_id) VALUES
     (1, 1, 1),  -- Felipe visited Facility 1, Payer 1 
     (1, 2, 2),  -- Felipe visited Facility 2, Payer 2
+    (1, 2, 2),  -- Felipe visited Facility 2, Payer 2
+    (1, 2, 2),  -- Felipe visited Facility 2, Payer 2
     (2, 3, 3),  -- Diego visited Facility 3, Payer 3 
     (3, 1, 3),  -- Matías visited Facility 1, Payer 3
     (3, 2, 4),  -- Matias visited Facility 2, Payer 4
     (4, 2, 2),  -- Karol visited Facility 2, Payer 2
     (5, 2, 2),  -- Jacobo visited Facility 2, Payer 2
-    (5, 2, 3);  -- Jacobo visited Facility 2, Payer 3
+    (5, 2, 3); -- Jacobo visited Facility 2, Payer 3
+    
