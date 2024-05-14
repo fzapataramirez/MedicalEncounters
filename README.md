@@ -46,3 +46,9 @@ The password specified in the file must match the password used for the certific
 ```bash
 docker-compose up
 ```
+
+## Deliverables
+
+- [Docker file](MedicalEncounters/MedicalEncounters.Api/Dockerfile)
+- [Docker compose file](MedicalEncounters/docker-compose.yml)
+- [DB initialization script](MedicalEncounters/init.sql): Database is automatically initialized when the postgres container is created.
